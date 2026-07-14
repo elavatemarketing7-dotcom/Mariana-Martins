@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Great+Vibes&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-signature: "Great Vibes", cursive;
+  
+  --color-gold-50: #fdfbf7;
+  --color-gold-100: #f7f3e8;
+  --color-gold-200: #eaddc3;
+  --color-gold-300: #d6bf94;
+  --color-gold-400: #c5a367;
+  --color-gold-500: #b38d50;
+  --color-gold-600: #99733d;
+  --color-gold-700: #7c592e;
+  --color-gold-800: #5a3f21;
+  --color-gold-900: #3b2814;
+  
+  --color-premium-dark: #11130e;
+  --color-premium-card: #1a1d16;
+  --color-premium-accent: #c5a367;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-premium-dark);
+    color: #e0d8cc;
+    font-family: var(--font-sans);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #11130e;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2d26;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a367;
+}
+
+/* Infinite scroll banner animation */
+@keyframes infinite-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 25s linear infinite;
+}
+
+@keyframes scroll-left-gallery {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-gallery-slow {
+  animation: scroll-left-gallery 45s linear infinite;
+}
+
+.animate-gallery-medium {
+  animation: scroll-left-gallery 35s linear infinite;
+}
+
+.pause-on-hover:hover {
+  animation-play-state: paused;
+}
+
+/* Shimmer animation for buttons */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 3s infinite linear;
+}
+

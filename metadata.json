@@ -1,0 +1,6 @@
+{
+  "name": "Dra. Mariana Martins - Harmonização Facial e Dental",
+  "description": "Landing page premium mobile-first com quiz interativo para agendamento de consultas exclusivas de harmonização facial e dental com a Dra. Mariana Martins em Barra do Garças MT.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
